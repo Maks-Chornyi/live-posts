@@ -1,1 +1,9 @@
-<p>post works!</p>
+<h2>{{post?.title}}</h2>
+<p>{{post?.description}}
+</p>
+<img
+  style="width: 634px"
+  src="{{post?.imagePath}}">
+<p>Author: {{post?.author}}</p>
+<p>Date: {{post?.created?.toString()}}</p>
+<button>Edit</button> | <button>Delete</button>
