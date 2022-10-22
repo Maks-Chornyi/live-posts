@@ -11,7 +11,7 @@ import {Router} from "@angular/router";
 export class PostComponent implements OnInit {
 
   @Input() post?: Post;
-  @Input() index?: number;
+  @Input() index!: number;
 
   constructor(private postService: PostService, private router: Router) { }
 
@@ -25,5 +25,9 @@ export class PostComponent implements OnInit {
 
   onEdit() {
     this.router.navigate(['/post-edit', this.index]).then((res) => console.log(res));
+  }
+
+  onLike() {
+      this.postService.likePost(this.index);
   }
 }

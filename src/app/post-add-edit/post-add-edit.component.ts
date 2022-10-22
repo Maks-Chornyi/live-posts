@@ -48,7 +48,7 @@ export class PostAddEditComponent implements OnInit {
     const description = this.form.value.description;
     const imagePath = this.form.value.imagePath;
 
-    const post: Post = new Post (title, description, imagePath, 'maks@maks.com', new Date());
+    const post: Post = new Post (title, description, imagePath, 'maks@maks.com', new Date(),0);
 
     if (this.editMode) {
       this.postService.editPost(this.postIndex, post);
