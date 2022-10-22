@@ -14,7 +14,8 @@ const routes: Routes = [
   { path: '',           redirectTo: '/post-list' , pathMatch: 'full'},
   { path: 'post-list',  component: PostListComponent },
   { path: 'auth',       component: AuthComponent },
-  { path: 'post-add',   component: PostAddEditComponent }
+  { path: 'post-add',   component: PostAddEditComponent },
+  { path: 'post-edit/:index',  component: PostAddEditComponent }
 ]
 
 @NgModule({

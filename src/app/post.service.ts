@@ -42,6 +42,10 @@ export class PostService {
     this.listOfPosts.push(newPost);
   }
 
+  public getPostByIndex(index: number): Post {
+    return this.listOfPosts[index];
+  }
+
   public editPost(index: number, post: Post): void {
     this.listOfPosts[index] = post;
   }
